@@ -4,7 +4,7 @@
 
 ### Pipeline As A Code (PaaC)  
 
-- [Project 04: Deploying Youtube Clone Application [ARGOCD]](https://github.com/saeedalig/youtube-clone-app.git)  
+- [Project 04: Deploying Youtube Clone Application (React Js) [ARGOCD]](https://github.com/saeedalig/youtube-clone-app.git)  
 - [Project-03: Deploying 2048 Game in Kubernetes Cluster.](https://github.com/saeedalig/2048-in-react.git)
 - [Project 02: Deploying Flask app using Argocd(GitOps)](https://github.com/saeedalig/flask-app.git)  
 - [Project-01: Deploying Petstore Application in kubernetes cluster using Ansible](https://github.com/saeedalig/petstore.git)
