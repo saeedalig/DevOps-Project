@@ -37,6 +37,7 @@ Access the app on port 9000. `admin' is its username and password by default
 - -> Click on Tokens
 - -> Generate token with some name
 - -> Copy the token. It will be used in Jenkins for Sonar authentication.
+
 ![Alt text](images/sonar-1.png)
 ![Alt text](images/sonar-2.png)
 
@@ -48,6 +49,7 @@ Access the app on port 9000. `admin' is its username and password by default
 - -> Server URL: *http://192.168.1.0:9000*          # Replace URL
 - -> Server authentication token: *sonar-token*     # Make sure you have added sonarqube token to jenkins credentials 
 - -> Apply and Save
+
 ![Alt text](images/sonar-system.png)
 ![Alt text](images/sonar-token-jenkins.png)
 
@@ -56,6 +58,7 @@ Access the app on port 9000. `admin' is its username and password by default
 - -> Name: *sonar-scanner*
 - -> Check the box to install automatically -> Select the version you need (optional)
 - -> Apply and Save
+  
  ![Alt text](images/sonar-tools.png) 
   
 
