@@ -31,8 +31,8 @@ Access the app on port 9000. `admin' is its username and password by default
 
 ### SonarQube integration with Jenkins
 **Step 1. Generate a Token in SonarQube Server:**
-- ->Open SonarQube server -> Go to Administration
-- -> click on Security
+- -> Open SonarQube server -> Go to Administration
+- -> Click on Security
 - -> Users
 - -> Click on Tokens
 - -> Generate token with some name
@@ -41,6 +41,7 @@ Access the app on port 9000. `admin' is its username and password by default
 ![Alt text](images/sonar-2.png)
 
 **Step 2. Setup SonarQube in Jenkin Server:**
+
 **System**
 - -> Go to Manage Jenkins -> System -> Scroll down to SonarQube server Section 
 - -> Name: *sonar-server*
