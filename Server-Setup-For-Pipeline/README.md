@@ -75,9 +75,11 @@ sudo chmod 777 /var/run/docker.sock
 ```
   **Jenkins Plugins for Docker**
 - Docker
+- Docker API
 - Docker Pipeline
-- Docker Commons
-- Docker build
+- Docker Commons Plugin
+- docker-build steps
+
 ![Alt text](images/docker-plugins.png)
 
 
