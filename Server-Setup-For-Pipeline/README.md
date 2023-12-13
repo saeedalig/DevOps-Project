@@ -108,11 +108,11 @@ To push the Docker Images to Dockerhub, you will be authenticated. To achieve so
 
 ![Alt text](images/dockerhub.png)
 
-- **Jenkins Server:** Dashboard -> Manage Jenkins -> Credetials -> System -> Global Credentilas(unrestricted)
-   - ***Kind***: Username and Password,
+- **Jenkins Server:** Dashboard -> Manage Jenkins -> Credetials -> System -> Global Credentials(unrestricted)
+   - ***Kind***: Username and Password
    - ***Scope***: Global
-   - ***Username***: <your-dockerhub-account>,
-   - ***Password***: Paste the Copied PAT,
+   - ***Username***: <your-dockerhub-account>
+   - ***Password***: Paste the Copied PAT
    - ***ID***: dockerhub-passwd
    - ***Description***: dockerhub-passwd(optional)
 
