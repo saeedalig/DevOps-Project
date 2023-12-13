@@ -63,10 +63,10 @@ newgrp docker
 sudo chmod 777 /var/run/docker.sock
 ```
   **Jenkins Plugins for Docker**
-    - Docker
-    - Docker Pipeline
-    - Docker Commons
-    - Docker build
+- Docker
+- Docker Pipeline
+- Docker Commons
+- Docker build
 ![Alt text](images/docker-plugins.png)
 
 
