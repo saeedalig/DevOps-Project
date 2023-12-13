@@ -43,7 +43,8 @@ Access the app on port 9000. `admin' is its username and password by default
 ![Alt text](images/sonar-2.png)
 
 **Step 2. Setup SonarQube in Jenkin Server:**
-First install *SonarQube Scanner Plugin*
+
+First install *SonarQube Scanner Plugin*: Dashboard -> Manage Jenkins -> Plugins -> Available Plugins -> Search
 
 **System**
 - -> Go to Manage Jenkins -> System -> Scroll down to SonarQube server Section 
@@ -62,6 +63,10 @@ First install *SonarQube Scanner Plugin*
 - -> Apply and Save
   
  ![Alt text](images/sonar-tools.png) 
+
+ ## OWASP Dependency-Check
+  Dashboard -> Manage Jenkins -> Plugins -> Available Plugins -> Search `Dependency-Check` and install.
+  Once installed, Go to Manage Jenkins -> Tools -> Scroll down to Dependency-Check -> Add Sonarqube Server
   
 
 
