@@ -39,14 +39,14 @@ Set the Content type to application/json.
 Choose the events that should trigger the webhook (e.g., push events).
 Optionally, configure other settings based on your requirements.
 
-Add GitHub Personal Access Token in Jenkins Credential:
+### 3. Add GitHub Personal Access Token in Jenkins Credential:
 
 In Jenkins, navigate to "Manage Jenkins" > "Manage Credentials."
 Under the "System" tab, click on "Global credentials."
 Add a new "Secret text" credential containing the GitHub Personal Access Token.
 Update Jenkins Job Configuration:
 
-Go back to your Jenkins job configuration.
+**Go back to your Jenkins job configuration.**
 In the "Build Triggers" section, choose "GitHub hook trigger for GITScm polling."
 In the "Build" section, configure the build steps, as needed.
 
