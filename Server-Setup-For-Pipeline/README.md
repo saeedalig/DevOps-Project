@@ -65,10 +65,26 @@ First install *SonarQube Scanner Plugin*: Dashboard -> Manage Jenkins -> Plugins
  ![Alt text](images/sonar-tools.png) 
 
  ## OWASP Dependency-Check
-  Dashboard -> Manage Jenkins -> Plugins -> Available Plugins -> Search `Dependency-Check` and install.
-  Once installed, Go to Manage Jenkins -> Tools -> Scroll down to Dependency-Check -> Add Sonarqube Server
-  
+Dashboard -> Manage Jenkins -> Plugins -> Available Plugins -> Search `Dependency-Check` and install.
+![Alt text](images/dp-check.png) 
 
+Once installed, Go to Manage Jenkins -> Tools -> Scroll down to Dependency-Check -> Add `Dependency-Check`
+- -> Name: *DP-Check*
+- -> Check the box to install automatically
+- -> Add Installer: *Install from github.com*
+![Alt text](images/dp-tools.png)
+
+
+## Install Trivy to scan the File System and Docker Images to detect vulnerabilities
+```
+sudo apt-get install wget apt-transport-https gnupg lsb-release -y
+wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
+
+echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main" | sudo tee -a /etc/apt/sources.list.d/trivy.list
+
+sudo apt-get update -y
+sudo apt-get install trivy -y
+```
 
 ### Docker
 ```
@@ -87,4 +103,11 @@ sudo chmod 777 /var/run/docker.sock
 
 ![Alt text](images/docker-plugins.png)
 
+To push the Docker Images to Dockerhub, you will be authenticated. To achieve so, add the Personal Access Token (PAT) of your Dockerhub Acount into Jenkins Credentials
+- **Generate Dockerhub PAT:** Go to Dockerhub -> Sign In/Sign Up -> My Account -> Security -> New Access Token
+![Alt text](images/dockerhub.png)
 
+- **Jenkins Server:** Dashboard -> Manage Jenkins 
+-> Credetials -> *Kind*: Username and Password, *Username*: <your-dockerhub-account>, *Password*: Paste the Copied PAT, *ID*: dockerhub-creds
+
+![Alt text](images/dockerhub-jenkins.png)
