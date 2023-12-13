@@ -34,7 +34,7 @@ Generate a new token with the required permissions (at least repo and admin:repo
 ### 2. Configure Webhook in GitHub:
 
 In your GitHub repository, go to "Settings" > "Webhooks" > "Add webhook."
-Set the Payload URL to your Jenkins server's webhook endpoint (http://your-jenkins-server/github-webhook/).
+Set the Payload URL to your Jenkins server's webhook endpoint (http://your-jenkins-server:port/github-webhook/).
 Set the Content type to application/json.
 Choose the events that should trigger the webhook (e.g., push events).
 Optionally, configure other settings based on your requirements.
