@@ -292,20 +292,31 @@ To push the Docker Images to Dockerhub, you will be authenticated. To achieve so
 
    Replace `--collector.logind` with any additional flags as needed.
 
-   Enable and start Node Exporter:
+   Enable and verify the status of Node Exporter:
 
    ```bash
    sudo systemctl enable node_exporter
    sudo systemctl start node_exporter
-   ```
-
-   Verify the Node Exporter's status:
-
-   ```bash
    sudo systemctl status node_exporter
    ```
 
-   You can access Node Exporter metrics in Prometheus.
+   You can access Node Exporter metrics in Prometheus by modifying the prometheus.yaml.
+   Add job for node_exporter
+   ```
+   sudo vim /etc/prometheus/prometheus.yml
+
+     - job_name: node_export
+       static_configs:
+         - targets: ["localhost:9100"]
+   ```
+![Alt text](images/node_exportet.png)
+
+Access Prometheus targets at:
+
+   `http://<your-prometheus-ip>:9090/targets`
+
+![Alt text](images/node-prom.png)
+
 
 2. **Configure Prometheus Plugin Integration:**
 
@@ -415,6 +426,8 @@ To make it easier to view metrics, you can import a pre-configured dashboard. Fo
 - Click on the "Import" button.
 
 You should now have a Grafana dashboard set up to visualize metrics from Prometheus.
+
+![Alt text](images/grafana-dashboard.png)
 
 Grafana is a powerful tool for creating visualizations and dashboards, and you can further customize it to suit your specific monitoring needs.
 
