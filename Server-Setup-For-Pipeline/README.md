@@ -351,8 +351,9 @@ To push the Docker Images to Dockerhub, you will be authenticated. To achieve so
 
 # Grafana
 
-**Install Grafana and Set it up to Work with Prometheus**
+**Set up Grafana to Work with Prometheus**
 
+**-> Install**
 ```
 sudo apt-get update
 sudo apt-get install -y apt-transport-https software-properties-common
@@ -367,7 +368,7 @@ sudo systemctl start grafana-server
 sudo systemctl status grafana-server
 ```
 
-**Access Grafana Web Interface:**
+**-> Access Grafana Web Interface:**
 
 Open a web browser and navigate to Grafana using your server's IP address. The default port for Grafana is 3000. For example:
 
@@ -375,11 +376,11 @@ Open a web browser and navigate to Grafana using your server's IP address. The d
 
 You'll be prompted to log in to Grafana. The default username is "admin," and the default password is also "admin."
 
-**Change the Default Password:**
+**-> Change the Default Password:**
 
 When you log in for the first time, Grafana will prompt you to change the default password for security reasons. Follow the prompts to set a new password.
 
-**Add Prometheus Data Source in Grafana:**
+**-> Add Prometheus Data Source in Grafana:**
 
 To visualize metrics, you need to add a data source. Follow these steps:
 
@@ -395,7 +396,7 @@ To visualize metrics, you need to add a data source. Follow these steps:
   - Set the "URL" to `http://localhost:9090` (assuming Prometheus is running on the same server).
   - Click the "Save & Test" button to ensure the data source is working.
 
-**Step 10: Import a Dashboard:**
+**-> Import a Dashboard:**
 
 To make it easier to view metrics, you can import a pre-configured dashboard. Follow these steps:
 
