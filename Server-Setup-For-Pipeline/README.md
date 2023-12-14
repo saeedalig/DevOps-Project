@@ -350,7 +350,7 @@ Access Prometheus targets at:
   You can access Prometheus targets at:
 
   `http://<your-prometheus-ip>:9090/targets`
-  
+
   ![Alt text](images/jenkins-node-prom.png)
 
 # Grafana
@@ -426,6 +426,4 @@ Grafana is a powerful tool for creating visualizations and dashboards, and you c
 
 That's it! You've successfully installed and set up Grafana to work with Prometheus for monitoring and visualization.
 
-2. **Configure Prometheus Plugin Integration:**
-    - Integrate Jenkins with Prometheus to monitor the CI/CD pipeline.
 
