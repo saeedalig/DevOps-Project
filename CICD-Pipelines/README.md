@@ -4,7 +4,7 @@
 
 ### Pipeline As A Code (PaaC)  
 
-- [Project 05: Deployin Netflix Clone App (Email Notification)](https://github.com/saeedalig/Netflix-Clone-App.git)  
+- [Project 05: Deployin Netflix Clone App with Monitoring and Email Notification](https://github.com/saeedalig/Netflix-Clone-App.git)  
 - [Project 04: Deploying Youtube Clone Application (React Js) [ARGOCD]](https://github.com/saeedalig/youtube-clone-app.git)  
 - [Project-03: Deploying 2048 Game in Kubernetes Cluster.](https://github.com/saeedalig/2048-in-react.git)
 - [Project 02: Deploying Flask app using Argocd(GitOps)](https://github.com/saeedalig/flask-app.git)  
