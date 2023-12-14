@@ -131,19 +131,17 @@ sudo chmod 777 /var/run/docker.sock
 
 ![Alt text](images/docker-plugins.png)
 
-**Add Dockerhub Credentials in Jenkins to securely push docker images to Registry** 
+To push the Docker Images to Dockerhub, you will be authenticated. To achieve so, add the Personal Access Token (PAT) of your Dockerhub Acount into Jenkins Credentials
+- **Generate Dockerhub PAT:** Go to Dockerhub -> Sign In/Sign Up -> My Account -> Security -> New Access Token
 
-    To push the Docker Images to Dockerhub, you will be authenticated. To achieve so, add the Personal Access Token (PAT) of your Dockerhub Acount into Jenkins Credentials
-    - **Generate Dockerhub PAT:** Go to Dockerhub -> Sign In/Sign Up -> My Account -> Security -> New Access Token
+![Alt text](images/dockerhub.png)
 
-    ![Alt text](images/dockerhub.png)
+- **Jenkins Server:** Dashboard -> Manage Jenkins -> Credetials -> System -> Global Credentials(unrestricted)
+   - ***Kind***: Username and Password
+   - ***Scope***: Global
+   - ***Username***: <your-dockerhub-account>
+   - ***Password***: Paste the Copied PAT
+   - ***ID***: dockerhub-passwd
+   - ***Description***: dockerhub-passwd(optional)
 
-    - **Jenkins Server:** Dashboard -> Manage Jenkins -> Credetials -> System -> Global Credentials(unrestricted)
-      - ***Kind***: Username and Password
-      - ***Scope***: Global
-      - ***Username***: <your-dockerhub-account>
-      - ***Password***: Paste the Copied PAT
-      - ***ID***: dockerhub-passwd
-      - ***Description***: dockerhub-passwd(optional)
-
-    ![Alt text](images/dockerhub-jenkins.png)
+![Alt text](images/dockerhub-jenkins.png)
