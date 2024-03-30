@@ -1,6 +1,6 @@
 # Server Setup for Pipeline
 
-## Jenkins
+# Jenkins
 ```
 sudo apt install openjdk-17-jdk -y
 
@@ -22,16 +22,16 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 ![Alt text](images/jenkins.png)
 
-## GitHUb Integration with Jenkins using Webhook
+# GitHUb Integration with Jenkins using Webhook
 
-### 1. Configure GitHub Webhook:
+## 1. Configure GitHub Webhook:
 - Generate a GitHub Personal Access Token:
 
 - Go to your GitHub account.
 - Navigate to "Settings" > "Developer settings" > "Personal access tokens."
 - Generate a new token with the required permissions (at least repo and admin:repo_hook).
 
-### 2. Configure Webhook in GitHub:
+## 2. Configure Webhook in GitHub:
 
 - In your GitHub repository, go to "Settings" > "Webhooks" > "Add webhook."
 - Set the Payload URL to your Jenkins server's webhook endpoint (http://your-jenkins-server:port/github-webhook/).
@@ -39,7 +39,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 - Choose the events that should trigger the webhook (e.g., push events).
 Optionally, configure other settings based on your requirements.
 
-### 3. Add GitHub Personal Access Token in Jenkins Credential:
+## 3. Add GitHub Personal Access Token in Jenkins Credential:
 
 - In Jenkins, navigate to "Manage Jenkins" > "Manage Credentials."
 - Under the "System" tab, click on "Global credentials."
@@ -51,13 +51,13 @@ Optionally, configure other settings based on your requirements.
 - In the "Build" section, configure the build steps, as needed.
 
 
-## Sonarqube
+# Sonarqube
 ```
 docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
 ```
 Access the app on port 9000. `admin' is its username and password by default
 
-### SonarQube integration with Jenkins 
+## SonarQube integration with Jenkins 
 
 **Step 1. Generate a Token on SonarQube Server:**
 - -> Open SonarQube server -> Go to Administration
@@ -92,7 +92,7 @@ First install *SonarQube Scanner Plugin*: Dashboard -> Manage Jenkins -> Plugins
   
  ![Alt text](images/sonar-tools.png) 
 
- ## OWASP Dependency-Check
+ # OWASP Dependency-Check
 Dashboard -> Manage Jenkins -> Plugins -> Available Plugins -> Search `Dependency-Check` and install.
 ![Alt text](images/dp-check.png) 
 
@@ -104,7 +104,7 @@ Once installed, Go to Manage Jenkins -> Tools -> Scroll down to Dependency-Check
 ![Alt text](images/dp-tools.png)
 
 
-## Install Trivy to scan the File System and Docker Images to detect vulnerabilities
+# Install Trivy to scan the File System and Docker Images to detect vulnerabilities
 ```
 sudo apt-get install wget apt-transport-https gnupg lsb-release -y
 wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
@@ -115,7 +115,7 @@ sudo apt-get update -y
 sudo apt-get install trivy -y
 ```
 
-### Docker
+## Docker
 ```
 sudo apt-get update
 sudo apt-get install docker.io -y
