@@ -25,11 +25,11 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ## GitHUb Integration with Jenkins using Webhook
 
 ### 1. Configure GitHub Webhook:
-Generate a GitHub Personal Access Token:
+- Generate a GitHub Personal Access Token:
 
-Go to your GitHub account.
-Navigate to "Settings" > "Developer settings" > "Personal access tokens."
-Generate a new token with the required permissions (at least repo and admin:repo_hook).
+- Go to your GitHub account.
+- Navigate to "Settings" > "Developer settings" > "Personal access tokens."
+- Generate a new token with the required permissions (at least repo and admin:repo_hook).
 
 ### 2. Configure Webhook in GitHub:
 
